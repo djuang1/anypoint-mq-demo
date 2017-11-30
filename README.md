@@ -18,20 +18,18 @@ The diagram below shows the flow of the application and how it interacts with An
 4. Edit the <b>DemoExchange</b> and bind the <b>ErrorQueue</b> and the <b>DemoQueue</b>
 5. Edit the <b>mule-app.properties</b> file in the imported Mule project in Studio and populate the properties.
 6. Run the project in Studio
-7. Open a browser and open the following URL - ```http://localhost:8081/test?number=123```
+7. Open a browser and open the following URL to kick off the flow - http://localhost:8081/test?number=123
 
-```mq.client_id=
+```
+mq.client_id=
 mq.client_secret=
 mq.url=https://mq-us-east-1.anypoint.mulesoft.com/api/v1
 
 mq.exchange=DemoExchange
 mq.queue=DemoQueue
 mq.queue_nack=ErrorQueue
-mq.queue_dlq=DemoDLQ```
-
-
-
-
+mq.queue_dlq=DemoDLQ
+```
 
 ## Mule Project
 Here are the flows contained in the project.
