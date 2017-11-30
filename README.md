@@ -8,11 +8,6 @@ The diagram below shows the flow of the application and how it interacts with An
 
 <img src="https://raw.githubusercontent.com/djuang1/anypoint-mq-demo/master/assets/application_flow.png" width="500px">
 
-## Mule Project
-Here are the flows contained in the project.
-
-<img src="https://raw.githubusercontent.com/djuang1/anypoint-mq-demo/master/assets/anypoint-mq-demo.png" width="500px">
-
 ## Setup
 1. Create Client App in MQ and copy down the client ID and client secret
 2. Create an exchange called <b>DemoExchange</b>
@@ -22,6 +17,8 @@ Here are the flows contained in the project.
   * <b>ErrorQueue</b> - Assign <b>DemoDLQ</b> as the Dead Letter Queue for this queue and set the 'Delivery attempts before reroute' to 1
 4. Edit the <b>DemoExchange</b> and bind the <b>ErrorQueue</b> and the <b>DemoQueue</b>
 5. Edit the <b>mule-app.properties</b> file in the imported Mule project in Studio and populate the properties.
+6. Run the project in Studio
+7. Open a browser and open the following URL - ```http://localhost:8081/test?number=123```
 
 ```mq.client_id=
 mq.client_secret=
@@ -31,3 +28,12 @@ mq.exchange=DemoExchange
 mq.queue=DemoQueue
 mq.queue_nack=ErrorQueue
 mq.queue_dlq=DemoDLQ```
+
+
+
+
+
+## Mule Project
+Here are the flows contained in the project.
+
+<img src="https://raw.githubusercontent.com/djuang1/anypoint-mq-demo/master/assets/anypoint-mq-demo.png" width="300px">
